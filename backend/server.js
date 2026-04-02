@@ -77,19 +77,19 @@ app.get('/about', async (req, res) => {
 // POST /about — create or update profile
 app.post('/about', async (req, res) => {
   try {
-    const { fullName, studentId, className, major, email, bio } = req.body;
+    const { fullName, studentId, className, major, email } = req.body;
     if (!fullName || !studentId || !className) {
       return res.status(400).json({ message: 'fullName, studentId và className là bắt buộc.' });
     }
 
     const existing = await Student.findOne({ studentId });
     if (existing) {
-      Object.assign(existing, { fullName, className, major, email, bio });
+      Object.assign(existing, { fullName, className, major, email });
       await existing.save();
       return res.json({ message: 'Cập nhật thành công!', student: existing });
     }
 
-    const student = new Student({ fullName, studentId, className, major, email, bio });
+    const student = new Student({ fullName, studentId, className, major, email });
     await student.save();
     res.status(201).json({ message: 'Tạo hồ sơ thành công!', student });
   } catch (err) {

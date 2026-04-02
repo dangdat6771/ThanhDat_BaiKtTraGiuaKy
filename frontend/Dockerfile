@@ -9,7 +9,8 @@ RUN npm install
 
 # Copy source and build
 COPY frontend/src ./src
-COPY frontend/index.html frontend/vite.config.js ./
+COPY frontend/index.html ./
+COPY frontend/vite.config.js ./
 RUN npm run build
 
 # ── Stage 2: Serve with nginx ─────────────────────────────────────────────────

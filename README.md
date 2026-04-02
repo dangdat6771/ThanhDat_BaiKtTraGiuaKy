@@ -41,6 +41,9 @@ student-app/
 | GET    | /notes       | Lấy danh sách ghi chú        |
 | POST   | /notes       | Thêm ghi chú mới             |
 | DELETE | /notes/:id   | Xóa ghi chú                  |
+| GET    | /notes       | Lấy danh sách ghi chú        |
+| POST   | /notes       | Thêm ghi chú mới             |
+| DELETE | /notes/:id   | Xóa ghi chú                  |
 
 ## 🔑 Environment Variables
 
@@ -202,8 +205,7 @@ Browser (http://localhost:3000)
 - [x] **Frontend**: React — hiển thị dữ liệu, form tương tác
 - [x] **Backend**: Node.js — GET + POST + PUT + DELETE
 - [x] **CSDL**: MongoDB — chạy container riêng với persistent volume
-- [x] **Trang /about**: Họ tên, MSSV, Lớp, Chuyên ngành, Email, Bio
-- [x] **Health Check /health**: `{"status":"ok", ...}`
+- [x] **Trang /about**: Họ tên, MSSV, Lớp, Chuyên ngành, Email, Bio- [x] **Trang /notes**: Danh sách ghi chú với form thêm mới- [x] **Health Check /health**: `{"status":"ok", ...}`
 - [x] **Environment Variables**: PORT, DB_URL, APP_NAME
 - [x] **Dockerfile Backend**: `backend/Dockerfile`
 - [x] **Dockerfile Frontend**: `frontend/Dockerfile` (multi-stage)
