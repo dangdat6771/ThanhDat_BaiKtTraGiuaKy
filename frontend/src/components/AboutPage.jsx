@@ -10,7 +10,7 @@ export default function AboutPage() {
 
   const [form, setForm] = useState({
     fullName: '', studentId: '', className: '',
-    major: 'Công nghệ thông tin', email: '', bio: '',
+    major: 'Công nghệ thông tin', email: '',
   })
 
   const loadProfile = async () => {
@@ -25,7 +25,6 @@ export default function AboutPage() {
           className: data.className || '',
           major: data.major || '',
           email: data.email || '',
-          bio: data.bio || '',
         })
       } else {
         setEditing(true)
@@ -106,10 +105,6 @@ export default function AboutPage() {
                 <label className="form-label">Email</label>
                 <input className="form-input" type="email" name="email" value={form.email} onChange={handleChange} placeholder="student@example.com" />
               </div>
-              <div className="form-group">
-                <label className="form-label">Bio</label>
-                <textarea className="form-textarea" name="bio" value={form.bio} onChange={handleChange} placeholder="Giới thiệu ngắn về bản thân..." />
-              </div>
               <div style={{ display: 'flex', gap: '0.75rem' }}>
                 <button className="btn btn-primary" type="submit" disabled={saving}>
                   {saving ? 'Đang lưu...' : 'Lưu hồ sơ'}
@@ -144,12 +139,6 @@ export default function AboutPage() {
                 <div className="profile-field" style={{ gridColumn: '1/-1' }}>
                   <div className="field-label">Email</div>
                   <div className="field-value">{profile.email}</div>
-                </div>
-              )}
-              {profile.bio && (
-                <div className="profile-field" style={{ gridColumn: '1/-1' }}>
-                  <div className="field-label">Bio</div>
-                  <div className="field-value" style={{ color: 'var(--muted)', fontSize: '0.9rem' }}>{profile.bio}</div>
                 </div>
               )}
             </div>

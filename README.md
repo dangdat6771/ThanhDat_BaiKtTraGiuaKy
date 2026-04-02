@@ -16,7 +16,6 @@ student-app/
 │   │   ├── api/index.js   # API client layer
 │   │   ├── components/
 │   │   │   ├── AboutPage.jsx   # GET + POST /about
-│   │   │   ├── NotesPage.jsx   # GET + POST + DELETE /notes
 │   │   │   └── HealthPage.jsx  # GET /health
 │   │   ├── App.jsx
 │   │   └── index.css
@@ -38,9 +37,6 @@ student-app/
 | GET    | /about       | Lấy thông tin sinh viên      |
 | POST   | /about       | Tạo / cập nhật hồ sơ         |
 | PUT    | /about/:id   | Cập nhật theo ID             |
-| GET    | /notes       | Lấy danh sách ghi chú        |
-| POST   | /notes       | Thêm ghi chú mới             |
-| DELETE | /notes/:id   | Xóa ghi chú                  |
 
 ## 🔑 Environment Variables
 
@@ -202,7 +198,7 @@ Browser (http://localhost:3000)
 - [x] **Frontend**: React — hiển thị dữ liệu, form tương tác
 - [x] **Backend**: Node.js — GET + POST + PUT + DELETE
 - [x] **CSDL**: MongoDB — chạy container riêng với persistent volume
-- [x] **Trang /about**: Họ tên, MSSV, Lớp, Chuyên ngành, Email, Bio
+- [x] **Trang /about**: Họ tên, MSSV, Lớp, Chuyên ngành, Email
 - [x] **Health Check /health**: `{"status":"ok", ...}`
 - [x] **Environment Variables**: PORT, DB_URL, APP_NAME
 - [x] **Dockerfile Backend**: `backend/Dockerfile`
