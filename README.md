@@ -16,7 +16,6 @@ student-app/
 │   │   ├── api/index.js   # API client layer
 │   │   ├── components/
 │   │   │   ├── AboutPage.jsx   # GET + POST /about
-│   │   │   ├── NotesPage.jsx   # GET + POST + DELETE /notes
 │   │   │   └── HealthPage.jsx  # GET /health
 │   │   ├── App.jsx
 │   │   └── index.css

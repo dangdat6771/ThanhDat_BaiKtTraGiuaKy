@@ -1,11 +1,9 @@
 import { useState } from 'react'
 import AboutPage from './components/AboutPage.jsx'
-import NotesPage from './components/NotesPage.jsx'
 import HealthPage from './components/HealthPage.jsx'
 
 const PAGES = [
   { id: 'about',  label: 'Hồ sơ',      icon: '◈' },
-  { id: 'notes',  label: 'Ghi chú',     icon: '◇' },
   { id: 'health', label: 'Health',      icon: '◉' },
 ]
 
@@ -39,7 +37,6 @@ export default function App() {
 
       <main className="main">
         {page === 'about'  && <AboutPage />}
-        {page === 'notes'  && <NotesPage />}
         {page === 'health' && <HealthPage />}
       </main>
     </div>
